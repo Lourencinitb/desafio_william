@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.10.4 on win32)" generated="20220519 13:53:08.444" rpa="false" schemaversion="3">
+<suite id="s1" name="Preencher" source="C:\rw5\new_user\Tests\preencher.robot">
+<kw name="Start Session" library="base" type="SETUP">
+<kw name="New Browser" library="Browser">
+<arg>chromium</arg>
+<arg>false</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<msg timestamp="20220519 13:53:09.838" level="INFO">{"browser": "chromium", "headless": false, "handleSIGINT": true, "handleSIGTERM": true, "handleSIGHUP": true, "timeout": 30000.0, "devtools": false, "slowMo": 0.0, "tracesDir": "C:\\rw5\\new_user\\logs\\browser\\traces\\cb002227-6392-4dd6-a606-774b4d391ac6"}</msg>
+<msg timestamp="20220519 13:53:10.952" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"handleSIGINT":true,"handleSIGTERM":true,"handleSIGHUP":true,"timeout":30000,"devtools":false,"slowMo":0,"tracesDir":"C:\\rw5\\new_user\\logs\\browser\\traces\\cb002227-6392-4dd6-a606-774b4d391ac6"}</msg>
+<status status="PASS" starttime="20220519 13:53:09.838" endtime="20220519 13:53:10.953"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>https://automacaocombatista.herokuapp.com/users/new</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<msg timestamp="20220519 13:53:13.705" level="INFO">Successfully initialized new page object and opened url: https://automacaocombatista.herokuapp.com/users/new</msg>
+<msg timestamp="20220519 13:53:13.705" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<status status="PASS" starttime="20220519 13:53:10.953" endtime="20220519 13:53:13.705"/>
+</kw>
+<kw name="Set Viewport Size" library="Browser">
+<arg>1920</arg>
+<arg>1080</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Sets current Pages viewport size to specified dimensions.</doc>
+<msg timestamp="20220519 13:53:13.791" level="INFO">Set viewport size to: [object Object]</msg>
+<status status="PASS" starttime="20220519 13:53:13.705" endtime="20220519 13:53:13.792"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<arg>h5</arg>
+<arg>contains</arg>
+<arg>Novo Usuário!!</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" starttime="20220519 13:53:13.793" endtime="20220519 13:53:13.908"/>
+</kw>
+<status status="PASS" starttime="20220519 13:53:09.837" endtime="20220519 13:53:13.908"/>
+</kw>
+<test id="s1-t1" name="Deve preencher o formulário do site" line="7">
+<kw name="Fill Text" library="Browser">
+<arg>css=input[id="user_name"]</arg>
+<arg>Luiz</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20220519 13:53:13.913" level="INFO">Fills the text 'Luiz' in the given field.</msg>
+<status status="PASS" starttime="20220519 13:53:13.913" endtime="20220519 13:53:13.944"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[id="user_lastname"]</arg>
+<arg>Lourencini</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20220519 13:53:13.947" level="INFO">Fills the text 'Lourencini' in the given field.</msg>
+<status status="PASS" starttime="20220519 13:53:13.946" endtime="20220519 13:53:13.989"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[id="user_email"]</arg>
+<arg>luizandrerson@gmail.com</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20220519 13:53:13.990" level="INFO">Fills the text 'luizandrerson@gmail.com' in the given field.</msg>
+<status status="PASS" starttime="20220519 13:53:13.989" endtime="20220519 13:53:14.030"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[id="user_lastname"]</arg>
+<arg>Lourencini</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20220519 13:53:14.035" level="INFO">Fills the text 'Lourencini' in the given field.</msg>
+<status status="PASS" starttime="20220519 13:53:14.035" endtime="20220519 13:53:14.078"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[id="user_address"]</arg>
+<arg>Avenida Eu nunca, 70 - De novo</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20220519 13:53:14.085" level="INFO">Fills the text 'Avenida Eu nunca, 70 - De novo' in the given field.</msg>
+<status status="PASS" starttime="20220519 13:53:14.084" endtime="20220519 13:53:14.125"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[id="user_university"]</arg>
+<arg>Da vida (Youtube)</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20220519 13:53:14.131" level="INFO">Fills the text 'Da vida (Youtube)' in the given field.</msg>
+<status status="PASS" starttime="20220519 13:53:14.131" endtime="20220519 13:53:14.161"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[id="user_profile"]</arg>
+<arg>Contador de causos</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20220519 13:53:14.164" level="INFO">Fills the text 'Contador de causos' in the given field.</msg>
+<status status="PASS" starttime="20220519 13:53:14.164" endtime="20220519 13:53:14.207"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[id="user_gender"]</arg>
+<arg>Anjo não tem sexo</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20220519 13:53:14.207" level="INFO">Fills the text 'Anjo não tem sexo' in the given field.</msg>
+<status status="PASS" starttime="20220519 13:53:14.207" endtime="20220519 13:53:14.263"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[id="user_age"]</arg>
+<arg>1983</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20220519 13:53:14.264" level="INFO">Fills the text '1983' in the given field.</msg>
+<status status="PASS" starttime="20220519 13:53:14.264" endtime="20220519 13:53:14.289"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220519 13:53:19.295" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220519 13:53:14.290" endtime="20220519 13:53:19.295"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>css=input[name="commit"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20220519 13:53:19.296" endtime="20220519 13:53:19.751"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220519 13:53:24.756" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220519 13:53:19.752" endtime="20220519 13:53:24.756"/>
+</kw>
+<status status="PASS" starttime="20220519 13:53:13.908" endtime="20220519 13:53:24.757"/>
+</test>
+<status status="PASS" starttime="20220519 13:53:08.446" endtime="20220519 13:53:24.767"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Preencher">Preencher</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

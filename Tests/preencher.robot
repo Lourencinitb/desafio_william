@@ -16,7 +16,7 @@ Deve preencher o formulário do site
     Fill Text       css=input[id="user_profile"]        Contador de causos
     Fill Text       css=input[id="user_gender"]         Anjo não tem sexo
     Fill Text       css=input[id="user_age"]            1983
-    Sleep           5
+    Sleep           5       #apenas para acompanhar
     Click           css=input[name="commit"]
-    Sleep           5
+    Sleep           5       #apenas para acompanhar
     
